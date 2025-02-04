@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Summary Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 10px;
+        }
+        table {
+            width: 70%;
+            margin: auto;
+            border: 2px solid black; /* Outer border for the entire table */
+        }
+        th, td {
+            border: 2px solid black; /* Border around every cell */
+            padding: 5px;
+            text-align: left;
+        }
+        th {
+            text-align: center;
+            font-weight: bold;
+        }
+        .btn {
+            padding: 5px 10px;
+            margin: 2px;
+            cursor: pointer;
+            border: 2px solid black; /* Added outer box for buttons */
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th rowspan="2">Category</th>
+            <th colspan="2">Transaction Details</th>
+            <th rowspan="2">Status</th>
+            <th rowspan="2">Action</th>
+        </tr>
+        <tr>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Food</td>
+            <td>$200</td>
+            <td>Groceries for the week</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Transportation</td>
+            <td>$100</td>
+            <td>Monthly bus pass</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Entertainment</td>
+            <td>$50</td>
+            <td>Cinema tickets</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Salary</td>
+            <td>$3000</td>
+            <td>Monthly salary payment</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Savings</td>
+            <td>$500</td>
+            <td>Emergency fund deposit</td>
+            <td>Pending</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Utilities</td>
+            <td>$150</td>
+            <td>Electricity bill</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Utilities</td>
+            <td>$50</td>
+            <td>Water bill</td>
+            <td>Pending</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Housing</td>
+            <td>$1200</td>
+            <td>Monthly rent</td>
+            <td>Completed</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+        <tr>
+            <td>Housing</td>
+            <td>$300</td>
+            <td>Maintenance fee</td>
+            <td>Pending</td>
+            <td><button class="btn">Edit</button> <button class="btn">Delete</button></td>
+        </tr>
+    </table>
+
+</body>
+</html>
