@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Problem Solving</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Problem Solving</h1>
+        <nav>
+            <button onclick="showProblem('atm-problem')">ATM</button>
+            <button onclick="showProblem('shopping-problem')">Online Shopping</button>
+            <button onclick="showProblem('grading-problem')">Student Grading Sysytem</button>
+            <button onclick="showProblem('traffic-problem')">Smart Traffic Light System</button>
+            <button onclick="showProblem('movie-problem')">Book Movie Ticket</button>
+            <button onclick="showProblem('job-problem')">Job Application Filter</button>
+            <button onclick="showProblem('coupon-problem')">E-commerce Coupon Redemption</button>
+            <button onclick="showProblem('fitness-problem')">Fitness Membership Plan</button>
+            <button onclick="showProblem('electricity-problem')">Electricity Bill Calculator</button>
+            <button onclick="showProblem('flight-problem')">Flight Ticket Booking System</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="atm-problem" class="problem-card" style="display: block;">
+            <h2>ATM Withdrawal</h2>
+            <div class="input-group">
+                <label for="atm-set-pin">Set PIN</label>
+                <input type="password" id="atm-set-pin" placeholder="Enter Your Four digit PIN" value="1234">
+            </div>
+            <div class="input-group">
+                <label for="atm-entered-pin">Enter PIN</label>
+                <input type="password" id="atm-entered-pin" placeholder="Enter Your Four digit PIN">
+            </div>
+            <div class="input-group">
+                <label for="atm-balance">Enter Balance:</label>
+                <input type="number" id="atm-balance" placeholder="Enter your Balance" value="10000">
+            </div>
+            <div class="input-group">
+                <label for="atm-amount">Enter Amount</label>
+                <input type="number" id="atm-amount" placeholder="Enter your Amount">
+            </div>
+            <button onclick="solveATM()">Withdraw</button>
+            <p id="atm-result" class="result"></p>
+        </section>
+
+        <section id="shopping-problem" class="problem-card" style="display: none;">
+            <h2>Online Shopping Discount & Free Shipping</h2>
+         <h3>Shipping Charges</h3>
+          
+            <div class="order-section">
+                <label for="order-amount">Order:</label>
+                <input type="number" id="order-amount" placeholder="Enter your order Amount">
+                <button onclick="solveShopping()">Buy Now</button>
+            </div>
+            <div class="calculation-results">
+                <p>Discount Amount: $<span id="discount-amount">0.00</span></p>
+                <p>Shipping Amount: $<span id="shipping-amount">0.00</span></p>
+                <p>Final Amount: $<span id="final-amount">0.00</span></p>
+            </div>
+        </section>
+
+        <section id="grading-problem" class="problem-card" style="display: none;">
+            <h2>Student Grading System</h2>
+            <div class="input-group">
+                <label for="marks">Marks:</label>
+                <input type="number" id="marks">
+            </div>
+            <div class="input-group">
+                <label for="attendance">Attendance (%):</label>
+                <input type="number" id="attendance">
+            </div>
+            <button onclick="solveGrading()">Calculate Grade</button>
+            <p id="grading-result" class="result"></p>
+        </section>
+
+        <section id="traffic-problem" class="problem-card" style="display: none;">
+            <h2>Smart Traffic Light System</h2>
+            <div class="input-group">
+                <label for="traffic-density">Traffic Density:</label>
+                <select id="traffic-density">
+                    <option value="Heavy Traffic">Heavy Traffic</option>
+                    <option value="Moderate Traffic">Moderate Traffic</option>
+                    <option value="Light Traffic">Light Traffic</option>
+                </select>
+            </div>
+            <button onclick="solveTraffic()">Check Signal Time</button>
+            <p id="traffic-result" class="result"></p>
+        </section>
+
+        <section id="movie-problem" class="problem-card" style="display: none;">
+            <h2>Book Movie Ticket</h2>
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age">
+            </div>
+            <div class="input-group">
+                <label for="show-time">Show Time (HH:mm):</label>
+                <input type="text" id="show-time" placeholder="HH:mm">
+            </div>
+            <button onclick="solveMovie()">Calculate Price</button>
+            <p id="movie-result" class="result"></p>
+        </section>
+
+        <section id="job-problem" class="problem-card" style="display: none;">
+            <h2>Job Application Filter</h2>
+            <div class="input-group">
+                <label for="job-age">Age:</label>
+                <input type="number" id="job-age">
+            </div>
+            <div class="input-group">
+                <label for="experience">Experience (years):</label>
+                <input type="number" id="experience">
+            </div>
+            <div class="input-group">
+                <label for="qualification">Qualification:</label>
+                <input type="text" id="qualification">
+            </div>
+            <button onclick="solveJob()">Check Eligibility</button>
+            <p id="job-result" class="result"></p>
+        </section>
+
+        <section id="coupon-problem" class="problem-card" style="display: none;">
+            <h2>E-commerce Coupon Redemption</h2>
+            <div class="input-group">
+                <label for="coupon-order-amount">Order Amount:</label>
+                <input type="number" id="coupon-order-amount">
+            </div>
+            <div class="input-group">
+                <label for="coupon-code">Coupon Code:</label>
+                <input type="text" id="coupon-code">
+            </div>
+            <button onclick="solveCoupon()">Apply Coupon</button>
+            <p id="coupon-result" class="result"></p>
+        </section>
+
+        <section id="fitness-problem" class="problem-card" style="display: none;">
+            <h2>Fitness Membership Plan</h2>
+            <div class="input-group">
+                <label for="plan-type">Plan Type:</label>
+                <select id="plan-type">
+                    <option value="Basic">Basic</option>
+                    <option value="Premium">Premium</option>
+                    <option value="VIP">VIP</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="wants-trainer"> Do You Wants Trainer:</label>
+                <input type="checkbox" id="wants-trainer">
+            </div>
+            <div class="input-group">
+                <label for="wants-diet-plan"> Do You Wants Diet Plan:</label>
+                <input type="checkbox" id="wants-diet-plan">
+            </div>
+            <button onclick="solveFitness()">Suggest Plan</button>
+            <p id="fitness-result" class="result"></p>
+        </section>
+
+        <section id="electricity-problem" class="problem-card" style="display: none;">
+            <h2>Electricity Bill Calculator</h2>
+            <div class="input-group">
+                <label for="units">Units Consumed:</label>
+                <input type="number" id="units">
+            </div>
+            <div class="input-group">
+                <label for="time-of-day">Time of Day:</label>
+                <select id="time-of-day">
+                    <option value="Normal hours">Normal hours (8 AM - 8 PM)</option>
+                    <option value="Peak hours">Peak hours (8 PM - 8 AM)</option>
+                </select>
+            </div>
+            <button onclick="solveElectricity()">Calculate Bill</button>
+            <p id="electricity-result" class="result"></p>
+        </section>
+
+        <section id="flight-problem" class="problem-card" style="display: none;">
+            <h2>Flight Ticket Booking System</h2>
+            <div class="input-group">
+                <label for="class-type">Class Type:</label>
+                <select id="class-type">
+                    <option value="Economy">Economy</option>
+                    <option value="Business">Business</option>
+                    <option value="First">First</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="luggage-weight">Luggage Weight (kg):</label>
+                <input type="number" id="luggage-weight">
+            </div>
+            <div class="input-group">
+                <label for="is-student">It Is For The Student:</label>
+                <input type="checkbox" id="is-student">
+            </div>
+            <div class="input-group">
+                <label for="is-senior">It Is For Senior Citizen:</label>
+                <input type="checkbox" id="is-senior">
+            </div>
+            <button onclick="solveFlight()">Calculate Fare</button>
+            <p id="flight-result" class="result"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

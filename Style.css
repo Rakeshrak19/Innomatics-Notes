@@ -1,0 +1,198 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccb7f1; /* Light purple background */
+    color: #333;
+}
+
+header {
+    background-color: #62a2c7; /* Purple header background */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+nav button {
+    background-color: #9b7eab; /* Light purple nav button */
+    color: #631f6f; /* Dark purple text */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #9e87b5; /* Slightly darker purple on hover */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.problem-card {
+    background-color: #ceade1; /* Light purple card background */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ceaded; /* Slightly darker purple border */
+}
+
+.problem-card h2 {
+    color: #53275b; /* Dark purple heading text */
+    margin-top: 0;
+    text-align: center; /* Center align problem titles */
+    margin-bottom: 20px; /* Add margin below problem title */
+}
+
+/* Styles for Discount & Shipping info in Online Shopping */
+.discount-info {
+    background-color: #d9c8f4; /* Very light purple background for info box */
+    border: 1px solid #be9fdb;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.discount-info h3 {
+    color: #512b58;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.discount-info ul {
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #6a4a74;
+}
+
+/* Styles for Order Section */
+.order-section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch items to fill container width */
+}
+
+.order-section label {
+    display: block; /* Ensure label takes full width */
+    margin-bottom: 8px;
+    color: #512b58;
+    text-align: left; /* Align label text to the left */
+}
+
+.order-section input[type="number"] {
+    padding: 10px;
+    border: 1px solid #d6bbf0;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.order-section button {
+    background-color: #9b5de5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    align-self: center; /* Center the button */
+}
+
+.order-section button:hover {
+    background-color: #8846c8;
+}
+
+
+/* Styles for Calculation Results */
+.calculation-results {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d6bbf0;
+    border-radius: 4px;
+    background-color: #e8daff; /* Very light purple for result background */
+}
+
+.calculation-results p {
+    margin: 8px 0;
+    font-weight: bold;
+    color: #512b58;
+}
+
+.calculation-results span {
+    font-weight: normal;
+}
+
+
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 15px;
+    color: #512b58; /* Dark purple label text */
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #d6bbf0; /* Border color matching card border */
+    border-radius: 4px;
+    flex-grow: 1;
+    font-size: 1rem;
+}
+
+.problem-card button {
+    background-color: #9b5de5; /* Purple button background */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: block; /* Make button full width if desired */
+    margin-top: 20px;    /* Add some space above the button */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.problem-card button:hover {
+    background-color: #8846c8; /* Darker purple on hover */
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d6bbf0; /* Result border color */
+    border-radius: 4px;
+    background-color: #e8daff; /* Very light purple for result background */
+    color: #512b58; /* Dark purple result text */
+    word-wrap: break-word; /* To prevent overflow of long text */
+}

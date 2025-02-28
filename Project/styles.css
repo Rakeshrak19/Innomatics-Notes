@@ -1,95 +1,468 @@
-element.style {
-}
-body {
-    overflow-x: hidden;
-}
-body {
-    font-family: Inter Tight;
-}
-html, body {
-    height: auto;
-    min-height: 100vh;
-}
-body {
-    font-style: normal;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #232323;
-    position: relative;
-}
-body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-body {
-    margin: 0;
-    font-family: var(--bs-font-sans-serif);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    background-color: #fff;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-user agent stylesheet
-body {
-    display: block;
-    margin: 8px;
-}
-:root {
-    --bs-blue: #0d6efd;
-    --bs-indigo: #6610f2;
-    --bs-purple: #6f42c1;
-    --bs-pink: #d63384;
-    --bs-red: #dc3545;
-    --bs-orange: #fd7e14;
-    --bs-yellow: #ffc107;
-    --bs-green: #198754;
-    --bs-teal: #20c997;
-    --bs-cyan: #0dcaf0;
-    --bs-white: #fff;
-    --bs-gray: #6c757d;
-    --bs-gray-dark: #343a40;
-    --bs-primary: #0d6efd;
-    --bs-secondary: #6c757d;
-    --bs-success: #198754;
-    --bs-info: #0dcaf0;
-    --bs-warning: #ffc107;
-    --bs-danger: #dc3545;
-    --bs-light: #f8f9fa;
-    --bs-dark: #212529;
-    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-}
-injected stylesheet
-:host, :root {
-    --rem: 16;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
-}
-*, ::after, ::before {
-    box-sizing: border-box;
+
+#home,
+#menu,
+#about,
+#contact {
+
+  height: 100vh;
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
+.navbar-fixed-top {
+  top: auto;
+}
+
+#mobirisePromo.container-banner {
+  height: 8rem;
+  opacity: 1;
+  -webkit-animation: 11s linear animationHeight;
+  -moz-animation: 11s linear animationHeight;
+  -o-animation: 11s linear animationHeight;
+  animation: 11s linear animationHeight;
+  transition: all 0.5s;
+}
+
+#mobirisePromo.container-banner.container-banner-closing {
+  pointer-events: none;
+  height: 0;
+  opacity: 0;
+  -webkit-animation: 0.5s linear animationClosing;
+  -moz-animation: 0.5s linear animationClosing;
+  -o-animation: 0.5s linear animationClosing;
+  animation: 0.5s linear animationClosing;
+}
+
+#mobirisePromo .banner {
+  min-height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 10px;
+  opacity: 1;
+  -webkit-animation: 11s linear animationBanner;
+  -moz-animation: 11s linear animationBanner;
+  -o-animation: 11s linear animationBanner;
+  animation: 11s linear animationBanner;
+  z-index: 1031;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#mobirisePromo .banner p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  animation: none;
+  visibility: visible;
+}
+
+#mobirisePromo .buy-license {
+  text-decoration: underline;
+}
+
+#mobirisePromo .banner .btn {
+  margin: 0.3rem 0.5rem;
+  animation: none;
+  visibility: visible;
+}
+
+.navbar.opened {
+  z-index: 1032;
+}
+
+@-webkit-keyframes animationBanner {
+  0% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  91% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-moz-keyframes animationBanner {
+  0% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  91% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-o-keyframes animationBanner {
+  0% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  91% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes animationBanner {
+  0% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  91% {
+    opacity: 0;
+    top: -8rem;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@-webkit-keyframes animationHeight {
+  0% {
+    height: 0;
+  }
+
+  91% {
+    height: 0;
+  }
+
+  100% {
+    height: 8rem;
+  }
+}
+
+@-moz-keyframes animationHeight {
+  0% {
+    height: 0;
+  }
+
+  91% {
+    height: 0;
+  }
+
+  100% {
+    height: 8rem;
+  }
+}
+
+@-o-keyframes animationHeight {
+  0% {
+    height: 0;
+  }
+
+  91% {
+    height: 0;
+  }
+
+  100% {
+    height: 8rem;
+  }
+}
+
+@keyframes animationHeight {
+  0% {
+    height: 0;
+  }
+
+  91% {
+    height: 0;
+  }
+
+  100% {
+    height: 8rem;
+  }
+}
+
+@-webkit-keyframes animationClosing {
+  0% {
+    height: 8rem;
+    opacity: 1;
+  }
+
+  30% {
+    height: 8rem;
+    opacity: 0.5;
+  }
+
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes animationClosing {
+  0% {
+    height: 8rem;
+    opacity: 1;
+  }
+
+  30% {
+    height: 8rem;
+    opacity: 0.5;
+  }
+
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@-o-keyframes animationClosing {
+  0% {
+    height: 8rem;
+    opacity: 1;
+  }
+
+  30% {
+    height: 8rem;
+    opacity: 0.5;
+  }
+
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes animationClosing {
+  0% {
+    height: 8rem;
+    opacity: 1;
+  }
+
+  30% {
+    height: 8rem;
+    opacity: 0.5;
+  }
+
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@media(max-width: 767px) {
+  #mobirisePromo.container-banner {
+    height: 12rem;
+  }
+
+  #mobirisePromo .banner {
+    min-height: 12rem;
+  }
+
+  @-webkit-keyframes animationBanner {
+    0% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    91% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @-moz-keyframes animationBanner {
+    0% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    91% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @-o-keyframes animationBanner {
+    0% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    91% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @keyframes animationBanner {
+    0% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    91% {
+      opacity: 0;
+      top: -12rem;
+    }
+
+    100% {
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  @-webkit-keyframes animationHeight {
+    0% {
+      height: 0;
+    }
+
+    91% {
+      height: 0;
+    }
+
+    100% {
+      height: 12rem;
+    }
+  }
+
+  @-moz-keyframes animationHeight {
+    0% {
+      height: 0;
+    }
+
+    91% {
+      height: 0;
+    }
+
+    100% {
+      height: 12rem;
+    }
+  }
+
+  @-o-keyframes animationHeight {
+    0% {
+      height: 0;
+    }
+
+    91% {
+      height: 0;
+    }
+
+    100% {
+      height: 12rem;
+    }
+  }
+
+  @keyframes animationHeight {
+    0% {
+      height: 0;
+    }
+
+    91% {
+      height: 0;
+    }
+
+    100% {
+      height: 12rem;
+    }
+  }
+
+  @-webkit-keyframes animationClosing {
+    0% {
+      height: 12rem;
+      opacity: 1;
+    }
+
+    30% {
+      height: 12rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  @-moz-keyframes animationClosing {
+    0% {
+      height: 12rem;
+      opacity: 1;
+    }
+
+    30% {
+      height: 12rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  @-o-keyframes animationClosing {
+    0% {
+      height: 12rem;
+      opacity: 1;
+    }
+
+    30% {
+      height: 12rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
+
+  @keyframes animationClosing {
+    0% {
+      height: 12rem;
+      opacity: 1;
+    }
+
+    30% {
+      height: 12rem;
+      opacity: 0.5;
+    }
+
+    100% {
+      height: 0;
+      opacity: 0;
+    }
+  }
 }
